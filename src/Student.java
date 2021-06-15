@@ -1,10 +1,24 @@
-public class Student {
-    private int id;
-    private String name;
-    private String _class;
-    private int chinese;
-    private int math;
-    private int english;
+import java.io.Serializable;
+
+public class Student implements Serializable {
+    private int id;  //学号
+    private String name;    //姓名
+    private String _class;  //班级
+    private Double chinese; //语文成绩
+    private Double math;    //数学
+    private Double english; //英语
+
+    public Student() {
+    }
+
+    public Student(int id, String name, String _class, Double chinese, Double math, Double english) {
+        this.id = id;
+        this.name = name;
+        this._class = _class;
+        this.chinese = chinese;
+        this.math = math;
+        this.english = english;
+    }
 
     @Override
     public String toString() {
@@ -16,19 +30,6 @@ public class Student {
                 ", math=" + math +
                 ", english=" + english +
                 '}';
-    }
-
-
-    public Student() {
-    }
-
-    public Student(int id, String name, String _class, int chinese, int math, int english) {
-        this.id = id;
-        this.name = name;
-        this._class = _class;
-        this.chinese = chinese;
-        this.math = math;
-        this.english = english;
     }
 
     public int getId() {
@@ -55,27 +56,27 @@ public class Student {
         this._class = _class;
     }
 
-    public int getChinese() {
+    public Double getChinese() {
         return chinese;
     }
 
-    public void setChinese(int chinese) {
+    public void setChinese(Double chinese) {
         this.chinese = chinese;
     }
 
-    public int getMath() {
+    public Double getMath() {
         return math;
     }
 
-    public void setMath(int math) {
+    public void setMath(Double math) {
         this.math = math;
     }
 
-    public int getEnglish() {
+    public Double getEnglish() {
         return english;
     }
 
-    public void setEnglish(int english) {
+    public void setEnglish(Double english) {
         this.english = english;
     }
 }
