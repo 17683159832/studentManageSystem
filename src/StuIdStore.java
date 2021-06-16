@@ -16,8 +16,8 @@ public class StuIdStore  implements AddAndUpdateScore{
              Student s=studentList.get(i);
                if(s.getChinese()!=null){
                    Scanner scanner = new Scanner(System.in);
+                   System.out.println("输入语文成绩：");
                    double C = scanner.nextDouble();
-                   System.out.println("输入语文成绩"+C);
 
                }
             }else{
@@ -31,8 +31,9 @@ public class StuIdStore  implements AddAndUpdateScore{
                 Student s=studentList.get(i);
                 if(s.getChinese()!=null){
                     Scanner scanner = new Scanner(System.in);
+                    System.out.println("输入数学成绩：");
                     double M = scanner.nextDouble();
-                    System.out.println("输入数学成绩"+M);
+
                 }
             }else{
                 System.out.println( "找不到该学号！");
@@ -45,8 +46,9 @@ public class StuIdStore  implements AddAndUpdateScore{
                 Student s=studentList.get(i);
                 if(s.getChinese()!=null){
                     Scanner scanner = new Scanner(System.in);
+                    System.out.println("输入英语成绩：");
                     double E = scanner.nextDouble();
-                    System.out.println("输入英语成绩"+E);
+
                 }
             }else{
                 System.out.println( "找不到该学号！");
@@ -60,7 +62,21 @@ public class StuIdStore  implements AddAndUpdateScore{
 
     @Override
     public boolean updateScore(int id) {
+        for (int i = 0; i < StuSystem.studentList.size(); i++) {
+            if(studentList.get(i).getId()==id){
+                Student s=studentList.get(i);
+                if(s.getChinese()!=null){
+                    Scanner scanner = new Scanner(System.in);
+                    double C = scanner.nextDouble();
+                    System.out.println("更改语文成绩"+C);
 
+                }
+            }else{
+                System.out.println( "找不到该学号！");
+                return  false;
+
+            }
+        }
         return false;
     }
 }
