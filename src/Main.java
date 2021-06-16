@@ -62,18 +62,22 @@ public class Main implements StuSystem{
             System.out.println("4.退出当前模块");
             System.out.println("==========================");
             int i = in.nextInt();
+            Show show = new Show();
 
             switch (i){
                 case 1:
                     //展示所有
+                    show.showAllStu();
                     break;
                 case 2:
                     //语文降序展示
+                    show.showDescChinese();
                     break;
                 case 3:
                     System.out.println("输入需要查看的班级：");
                     String c = in.nextLine();
                     //班级查看方法
+                    show.showStuByClass(c);
                     break;
                 case 4:
                     return;
@@ -93,18 +97,19 @@ public class Main implements StuSystem{
             System.out.println("==========================");
 
             int i = in.nextInt();
-
+            StuIdStore stuIdStore = new StuIdStore();
             switch (i){
                 case 1:
                     //添加成绩
                     System.out.println("输入添加学生成绩的学号：");
                     int id1 = in.nextInt();
-
+                    stuIdStore.addScore(id1);
                     break;
                 case 2:
                     //修改成绩
                     System.out.println("输入修改学生成绩的学号：");
                     int id2 = in.nextInt();
+                    stuIdStore.updateScore(id2);
                     break;
                 case 3:
                     return;
@@ -134,6 +139,7 @@ public class Main implements StuSystem{
                     break;
                 case 3:
                     //删除对应学号方法
+                    
                     break;
                 case 4:
                     return;
