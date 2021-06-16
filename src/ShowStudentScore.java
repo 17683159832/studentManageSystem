@@ -12,4 +12,10 @@ public interface ShowStudentScore extends StuSystem{
 
     //通过参数班级名，按班级展示
     void showStuByClass(String _className);
+    //通过学号查找来展示
+    void showId(int id);
+    //通过名字查找学生成绩
+    void showNameStu(String _name);
+
+
 }
