@@ -1,4 +1,4 @@
-public class show implements ShowStudentScore {
+public class Show implements ShowStudentScore {
 
 
 
