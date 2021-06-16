@@ -51,8 +51,29 @@ public class Show implements ShowStudentScore {
 
 
     }
+    //通过学号查找来展示
+    @Override
+    public void showId(int id) {
+        for (int i = 0;i<studentList.size();i++){
+            if (studentList.get(i).getId() == id){
+                System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
+                        " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
+                        +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
 
-
+            }
+        }
+    }
+    //通过名字查找学生成绩
+    @Override
+    public void showNameStu(String _name) {
+        for (int i = 0;i<studentList.size();i++){
+            if (studentList.get(i).getName() == _name){
+                System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
+                        " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
+                        +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
+            }
+        }
+    }
 
 
 
