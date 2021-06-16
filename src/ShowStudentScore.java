@@ -2,7 +2,7 @@
  * 赵子昂负责
  * 注意：所使用的学生临时保存在studentList集合中
  */
-public interface ShowStudentScore {
+public interface ShowStudentScore extends StuSystem{
 
     //展示全部学生
     void showAllStu();
