@@ -61,7 +61,7 @@ public class Show implements ShowStudentScore {
                         +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
 
             }
-        } ]
+        }
     }
     //通过名字查找学生成绩
     @Override
