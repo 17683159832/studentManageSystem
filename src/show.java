@@ -21,10 +21,10 @@ public class show implements ShowStudentScore {
         for (int i=0;i<studentList.size();i++){
             for (int j=0;j<studentList.size()-i;j++){
                 if (studentList.get(j).getChinese()<studentList.get(j+1).getChinese()){
-                    double t = 0;
-                    t  = studentList.get(j).getChinese();
-                    studentList.get(j).getChinese()=studentList.get(j+1).getChinese();
-                    studentList.get(j+1).getChinese()=t;
+                    Student t =new Student();
+                    t  = studentList.get(j);
+                    studentList.set(j,studentList.get(j+1));
+                    studentList.set(j+1,t);
                 }
 
             }
@@ -42,7 +42,7 @@ public class show implements ShowStudentScore {
 
         System.out.println("一下都是"+_className+"的");
         for (int i = 0;i<studentList.size();i++){
-            if (studentList.get(i).get_class() = _className){
+            if (studentList.get(i).get_class() == _className){
                 System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
                         " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
                         +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
