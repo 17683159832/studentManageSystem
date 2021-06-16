@@ -21,11 +21,10 @@ public class show implements ShowStudentScore {
         for (int i=0;i<studentList.size();i++){
             for (int j=0;j<studentList.size()-i;j++){
                 if (studentList.get(j).getChinese()<studentList.get(j+1).getChinese()){
-                    double t = 0;
-                    t  = studentList.get(j).getChinese();
-                    studentList.get(j).setChinese()=studentList.get(j+1).getChinese();
-                    studentList.get(j+1).getChinese()=t;
-
+                    Student t =new Student();
+                    t  = studentList.get(j);
+                    studentList.set(j,studentList.get(j+1));
+                    studentList.set(j+1,t);
                 }
 
             }
