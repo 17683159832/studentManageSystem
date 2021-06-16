@@ -1,6 +1,4 @@
-import com.sun.deploy.net.MessageHeader;
 
-import javax.xml.bind.SchemaOutputResolver;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class StuIdStore  implements AddAndUpdateScore{
