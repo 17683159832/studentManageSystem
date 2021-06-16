@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class Student implements Serializable {
+public class Student{
     private int id;  //学号
     private String name;    //姓名
     private String _class;  //班级
