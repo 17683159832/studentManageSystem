@@ -43,6 +43,7 @@ public class Main implements StuSystem{
                     //退出并保存
                     try {
                         file.outStuToFile();
+                        System.exit(0);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -59,7 +60,9 @@ public class Main implements StuSystem{
             System.out.println("1.展示所有学生");
             System.out.println("2.按语文降序展示");
             System.out.println("3.按班级展示");
-            System.out.println("4.退出当前模块");
+            System.out.println("4.通过学号查询");
+            System.out.println("5.按姓名查询");
+            System.out.println("6.退出当前模块");
             System.out.println("==========================");
             int i = in.nextInt();
             Show show = new Show();
@@ -80,6 +83,15 @@ public class Main implements StuSystem{
                     show.showStuByClass(c);
                     break;
                 case 4:
+                    System.out.println("输入需要查看的学号：");
+                    int x = in.nextInt();
+                    show.showId(x);
+                    break;
+                case 5:
+                    System.out.println("输入需要查看的姓名：");
+                    String n = in.nextLine();
+                    show.showNameStu(n);
+                case 6:
                     return;
                 default:
                     System.out.println("输入非法");
@@ -129,17 +141,21 @@ public class Main implements StuSystem{
             System.out.println("4.退出当前模块");
             System.out.println("==========================");
             int i = in.nextInt();
-
+            CreateStudent creS = new CreateStudent();
             switch (i){
                 case 1:
                     //添加学生方法
+                    creS.createStu();
                     break;
                 case 2:
                     //添加并初始化成绩
+                    creS.createStuAndScore();
                     break;
                 case 3:
                     //删除对应学号方法
-                    
+                    System.out.println("输入删除学生的学号：");
+                    int id2 = in.nextInt();
+                    creS.deleteStuById(id2);
                     break;
                 case 4:
                     return;
