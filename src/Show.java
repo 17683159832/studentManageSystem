@@ -3,10 +3,12 @@ public class Show implements ShowStudentScore {
     @Override
     public void showAllStu() {
         for (int i =0;i<studentList.size();i++){
-
-            System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
-                    " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
-            +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
+            System.out.println("名字："+studentList.get(i).getName()+" "
+                    +"班级："+studentList.get(i).get_class()+
+                    " "+"学号："+studentList.get(i).getId()+" "+"语文成绩:"
+                    +studentList.get(i).getChinese()+" "+"数学成绩:"
+                    +studentList.get(i).getMath()+" "+"英语成绩:"
+                    +studentList.get(i).getEnglish());
         }
     }
     //按语文降序展示
@@ -23,9 +25,12 @@ public class Show implements ShowStudentScore {
             }
         }
         for (int i = 0;i<studentList.size();i++){
-            System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
-                    " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
-                    +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
+            System.out.println("名字："+studentList.get(i).getName()+" "
+                    +"班级："+studentList.get(i).get_class()+
+                    " "+"学号："+studentList.get(i).getId()+" "
+                    +"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
+                    +studentList.get(i).getMath()+" "
+                    +"英语成绩"+studentList.get(i).getEnglish());
         }
     }
     //通过参数班级名，按班级展示
@@ -33,9 +38,12 @@ public class Show implements ShowStudentScore {
     public void showStuByClass(String _className) {
         for (int i = 0;i<studentList.size();i++){
             if (studentList.get(i).get_class().equals(_className)){
-                System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
-                        " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
-                        +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
+                System.out.println("名字："+studentList.get(i).getName()+" "
+                        +"班级："+studentList.get(i).get_class()+
+                        " "+"学号："+studentList.get(i).getId()+" "
+                        +"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
+                        +studentList.get(i).getMath()+" "
+                        +"英语成绩:"+studentList.get(i).getEnglish());
             }
         }
     }
@@ -44,9 +52,12 @@ public class Show implements ShowStudentScore {
     public void showId(int id) {
         for (int i = 0;i<studentList.size();i++){
             if (studentList.get(i).getId() == id){
-                System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
-                        " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
-                        +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
+                System.out.println("名字："+studentList.get(i).getName()+" "
+                        +"班级："+studentList.get(i).get_class()+
+                        " "+"学号："+studentList.get(i).getId()+" "
+                        +"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
+                        +studentList.get(i).getMath()+" "+"英语成绩:"
+                        +studentList.get(i).getEnglish());
             }
         }
     }
@@ -55,13 +66,13 @@ public class Show implements ShowStudentScore {
     public void showNameStu(String _name) {
         for (int i = 0;i<studentList.size();i++){
             if (studentList.get(i).getName().equals(_name)){
-                System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
-                        " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
-                        +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
+                System.out.println("名字："+studentList.get(i).getName()+" "+"班级："
+                        +studentList.get(i).get_class()+
+                        " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："
+                        +studentList.get(i).getChinese()+" "+"数学成绩:"
+                        +studentList.get(i).getMath()+" "+"英语成绩:"
+                        +studentList.get(i).getEnglish());
             }
         }
     }
-
-
-
 }
