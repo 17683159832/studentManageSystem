@@ -5,7 +5,7 @@
 
 public interface CreateAndDeleteStudent extends StuSystem{
 
-    //创建学生（无成绩），并把学生存放在studentList中
+    //创建学生，并把学生存放在studentList中
     Student createStu();
 
    //修改学生基本信息

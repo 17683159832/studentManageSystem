@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class CreateStudent implements CreateAndDeleteStudent{
 
-    //创建学生（无成绩），并把学生存放在studentList中
+    //创建学生，并把学生存放在studentList中
     @Override
     public Student createStu() {
         System.out.println("输入学生姓名：");
@@ -24,9 +24,9 @@ public class CreateStudent implements CreateAndDeleteStudent{
         return s;
     }
 
-    //修改学生基本信息
+    //通过id修改学生基本信息
     @Override
-    void updateStu(int id) {
+    public void updateStu(int id) {
         createStu();
         Scanner scanner = new Scanner(System.in);
         Student student = new Student();

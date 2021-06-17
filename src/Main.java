@@ -139,8 +139,10 @@ public class Main implements StuSystem{
                     creS.createStu();
                     break;
                 case 2:
-                    //添加并初始化成绩
-                    creS.createStuAndScore();
+                    //修改学生基本信息
+                    System.out.println("输入修改学生的学号：");
+                    int id = in.nextInt();
+                    creS.updateStu(id);
                     break;
                 case 3:
                     //删除对应学号方法
