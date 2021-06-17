@@ -27,13 +27,18 @@ public class CreateStudent implements CreateAndDeleteStudent{
     //通过id修改学生基本信息
     @Override
     public void updateStu(int id) {
-        createStu();
-        Scanner scanner = new Scanner(System.in);
-        Student student = new Student();
-        student.setName(scanner.nextLine());
-        student.set_class(scanner.nextLine());
-        student.setId(scanner.nextInt());
-        studentList.add(student);
+        for (int i = 0; i < studentList.size(); i++) {
+            if (id == studentList.get(i).getId()){
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("修改姓名：");
+                studentList.get(i).setName(scanner.nextLine());
+                System.out.println("修改班级：");
+                studentList.get(i).set_class(scanner.nextLine());
+                System.out.println("修改学号");
+                studentList.get(i).setId(scanner.nextInt());
+            }
+        }
+
     }
 
     //通过学号删除学生
