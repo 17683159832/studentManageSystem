@@ -1,8 +1,5 @@
 public class Show implements ShowStudentScore {
 
-
-
-
     //展示全部学生
     @Override
     public void showAllStu() {

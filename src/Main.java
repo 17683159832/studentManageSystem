@@ -91,6 +91,7 @@ public class Main implements StuSystem{
                     System.out.println("输入需要查看的姓名：");
                     String n = in.nextLine();
                     show.showNameStu(n);
+                    break;
                 case 6:
                     return;
                 default:
