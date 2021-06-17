@@ -1,15 +1,12 @@
 public class Show implements ShowStudentScore {
-
     //展示全部学生
     @Override
     public void showAllStu() {
-
         for (int i =0;i<studentList.size();i++){
 
             System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
                     " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
             +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
-
         }
     }
     //按语文降序展示
@@ -23,7 +20,6 @@ public class Show implements ShowStudentScore {
                     studentList.set(j,studentList.get(j+1));
                     studentList.set(j+1,t);
                 }
-
             }
         }
         for (int i = 0;i<studentList.size();i++){
@@ -31,13 +27,10 @@ public class Show implements ShowStudentScore {
                     " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
                     +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
         }
-
     }
     //通过参数班级名，按班级展示
     @Override
     public void showStuByClass(String _className) {
-
-
         for (int i = 0;i<studentList.size();i++){
             if (studentList.get(i).get_class().equals(_className)){
                 System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
@@ -45,8 +38,6 @@ public class Show implements ShowStudentScore {
                         +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
             }
         }
-
-
     }
     //通过学号查找来展示
     @Override
@@ -56,7 +47,6 @@ public class Show implements ShowStudentScore {
                 System.out.println("名字："+studentList.get(i).getName()+" "+"班级："+studentList.get(i).get_class()+
                         " "+"学号："+studentList.get(i).getId()+" "+"语文成绩："+studentList.get(i).getChinese()+" "+"数学成绩:"
                         +studentList.get(i).getMath()+" "+"英语成绩"+studentList.get(i).getEnglish());
-
             }
         }
     }

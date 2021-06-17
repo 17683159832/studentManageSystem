@@ -1,6 +1,4 @@
 import java.io.*;
-import java.util.List;
-
 public class FileSaveAndLoad  implements FileManage,StuSystem{
     @Override
     public boolean loadStu() throws IOException, ClassNotFoundException {
@@ -17,6 +15,7 @@ public class FileSaveAndLoad  implements FileManage,StuSystem{
             s1.setEnglish(Double.parseDouble(stus[5]));
             studentList.add(s1);
         }
+        in.close();
         return true;
     }
 

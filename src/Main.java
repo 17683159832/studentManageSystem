@@ -1,14 +1,11 @@
 import java.io.IOException;
 import java.util.Scanner;
-
 /**
- * 提供界面交互
+ * 提供界面交互，函数调用
  */
 public class Main implements StuSystem{
     static Scanner in = new Scanner(System.in);
-
     public static void main(String[] args) {
-
         //文件加载
         FileSaveAndLoad file = new FileSaveAndLoad();
         try {
@@ -18,7 +15,6 @@ public class Main implements StuSystem{
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
         while (true){
             System.out.println("==========================");
             System.out.println("输入序号完成对应操作：");
@@ -27,7 +23,6 @@ public class Main implements StuSystem{
             System.out.println("3.展示成绩模块");
             System.out.println("4.退出并保存");
             System.out.println("==========================");
-
             int i = in.nextInt();
             switch(i){
                 case 1:
@@ -52,7 +47,6 @@ public class Main implements StuSystem{
             }
         }
     }
-
     private static void stuShow() {
         while (true){
             System.out.println("==========================");
@@ -66,7 +60,6 @@ public class Main implements StuSystem{
             System.out.println("==========================");
             int i = in.nextInt();
             Show show = new Show();
-
             switch (i){
                 case 1:
                     //展示所有
@@ -78,7 +71,7 @@ public class Main implements StuSystem{
                     break;
                 case 3:
                     System.out.println("输入需要查看的班级：");
-                    String c = in.nextLine();
+                    String c = new Scanner(System.in).nextLine();
                     //班级查看方法
                     show.showStuByClass(c);
                     break;
@@ -89,7 +82,7 @@ public class Main implements StuSystem{
                     break;
                 case 5:
                     System.out.println("输入需要查看的姓名：");
-                    String n = in.nextLine();
+                    String n = new Scanner(System.in).nextLine();
                     show.showNameStu(n);
                     break;
                 case 6:
@@ -99,7 +92,6 @@ public class Main implements StuSystem{
             }
         }
     }
-
     private static void stuScore() {
         while (true){
             System.out.println("==========================");
@@ -108,7 +100,6 @@ public class Main implements StuSystem{
             System.out.println("2.修改对应学号学生成绩");
             System.out.println("3.退出当前模块");
             System.out.println("==========================");
-
             int i = in.nextInt();
             StuIdStore stuIdStore = new StuIdStore();
             switch (i){
@@ -131,7 +122,6 @@ public class Main implements StuSystem{
             }
         }
     }
-
     private static void stuManage() {
         while (true){
             System.out.println("==========================");
