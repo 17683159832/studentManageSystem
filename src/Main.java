@@ -127,7 +127,7 @@ public class Main implements StuSystem{
             System.out.println("==========================");
             System.out.println("输入序号完成对应操作：");
             System.out.println("1.添加学生");
-            System.out.println("2.添加学生并初始化成绩");
+            System.out.println("2.修改学生的基本信息");
             System.out.println("3.删除对应学号学生");
             System.out.println("4.退出当前模块");
             System.out.println("==========================");

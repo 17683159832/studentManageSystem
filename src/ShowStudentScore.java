@@ -13,5 +13,4 @@ public interface ShowStudentScore extends StuSystem{
     void showId(int id);
     //通过名字查找学生成绩
     void showNameStu(String _name);
-
 }
